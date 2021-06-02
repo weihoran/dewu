@@ -22,7 +22,13 @@ $(function() {
 	var formData = new FormData(); //创建一个formdata用来post
 	$("#inputs").change(function() {
         var fil = this.files;
+
         for(var i = 0; i < fil.length; i++) {
+            if(fil[i].size > 1024 * 1024){
+                alert("图片不能大于1M")
+                this.value = ""
+                return
+            }
             reads(fil[i]);
             img.push(fil[i]); //将传入的图片push到空对象中
             formData.append("files",fil[i])
