@@ -48,6 +48,11 @@ $(function() {
 
     $("#upload").click(function(){
         var productName = $(".name").val().trim();
+        var expert = $("#expert").val()
+        if (!expert){
+            alert("请选择鉴别师")
+            return
+        }
         if (productName == '' || productName == undefined || productName == null){
             alert("请输入产品名称！")
             return
@@ -56,9 +61,9 @@ $(function() {
             alert("请上传图片！")
             return
         }
-
         formData.append("productName",productName)
         formData.append("userCode",code)
+        formData.append("expert", expert)
         $.ajax({
             "url": "/api/identify",
             "data" : formData,
@@ -67,7 +72,7 @@ $(function() {
             "contentType" : false, //上传文件一定要是false
             "processData":false,
             "success" : function(response) {
-                window.location = "/identification?serial=" + response
+                window.location = "/identification?serial=" + response + "&expert=" + expert
             }
         });
 
