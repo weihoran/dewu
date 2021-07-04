@@ -72,7 +72,11 @@ $(function() {
             "contentType" : false, //上传文件一定要是false
             "processData":false,
             "success" : function(response) {
-                window.location = "/identification?serial=" + response + "&expert=" + expert
+                var d = new Date();
+                var month = d.getMonth()+1;
+                var day = d.getDate();
+
+                window.location = "/identification?serial=" + response + "&expert=" + expert + "&m=" + month + "&d=" + day
             }
         });
 
