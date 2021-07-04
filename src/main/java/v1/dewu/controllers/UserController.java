@@ -72,13 +72,14 @@ public class UserController {
     }
 
     @PostMapping("/api/identify")
-    public long identify(@RequestParam("productName") String productName, @RequestParam("userCode") String userCode, @RequestParam("files") MultipartFile[] files, MultipartHttpServletRequest request) throws IOException {
+    public long identify(@RequestParam("productName") String productName, @RequestParam("userCode") String userCode, @RequestParam("expert") String expert, @RequestParam("files") MultipartFile[] files, MultipartHttpServletRequest request) throws IOException {
         CodeUser user = userService.getUserById(userCode);
         user.consumeTimes();
         userService.saveOrUpdate(user);
         //String pathname = "photos/";
         Identification identification = new Identification();
         identification.setProductName(productName);
+        identification.setExpert(expert);
         long serialNumber = generateSerialNumber();
         identification.setSerialNumber(serialNumber);
         List<String> imageList = new ArrayList<>();
