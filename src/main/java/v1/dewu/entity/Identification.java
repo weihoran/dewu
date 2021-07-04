@@ -15,6 +15,9 @@ public class Identification {
     @Column
     private String productName;
 
+    @Column
+    private String expert;
+
     @ElementCollection
     private List<String> imagelist;
 
@@ -32,6 +35,12 @@ public class Identification {
 
     public void setSerialNumber(long serialNumber) {
         this.serialNumber = serialNumber;
+    }
+
+    public String getExpert(){return expert;}
+
+    public void setExpert(String expert) {
+        this.expert = expert;
     }
 
     public List getImagelist() {
