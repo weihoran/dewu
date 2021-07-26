@@ -25,7 +25,7 @@ public class HelperFunctions {
     }
 
     public static long generateSerialNumber() {
-        return System.currentTimeMillis();
+        return Long.parseLong(String.valueOf(System.currentTimeMillis()).substring(0,9));
     }
 
     //获取文件后缀
