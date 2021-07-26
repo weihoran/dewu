@@ -46,16 +46,16 @@ h3{
     margin-top:10px;
 }
 
-h5{
+.h5{
     margin-top: 2.667vw;
     font-family: PingFangSC-Regular;
     font-size: 3.2vw;
     color: #aab;
     text-align: center;
     line-height: 4.533vw;
-    font-weight:normal;
 }
-.number1{
+
+.resultIdCon{
     margin: 5.333vw 0;
     font-family: PingFangSC-Medium;
     font-weight: 500;
@@ -65,12 +65,19 @@ h5{
     line-height: 7.2vw;
 }
 .number2{
+    letter-spacing: 0px !important;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: 600;
+    vertical-align: baseline;
     font-family: HelveticaNeue-CondensedBold;
     font-size: 5.3vw;
     color: #01c2c3;
+    text-align: center;
+    line-height: 6.133vw;
     position: relative;
-    top: 0.3px;
-    left: -5px;
+    top: .233vw;
 }
 
 .border{
@@ -90,13 +97,52 @@ h5{
 
 }
 
+.logoCon {
+    padding: 0 5.333vw;
+}
+
+.logoImgCon {
+    border-top: 1px dashed #c7c7d7;
+    padding: 5.333vw 0;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 9.867vw;
+    height: 9.867vw;
+}
+.logoText {
+    margin-left: 3.467vw;
+}
+.logoTitle {
+    color: #14151a;
+    font-family: PingFangSC-Medium;
+    font-size: 5.333vw;
+    font-weight: 500;
+    line-height: 5.867vw;
+}
+.logoMemo {
+    color: #aab;
+    font-size: 2.933vw;
+    font-family: PingFangSC-Light;
+    font-weight: 300;
+    line-height: 4.267vw;
+}
+
+.space {
+    height: 2.133vw;
+    background: #f5f5f9;
+}
+
 h4{
     font-weight: 600;
     font-family: HelveticaNeue-CondensedBold;
     font-size: 4vw;
     color: #2b2b3c;
     text-align: center;
-    margin: 0 0 3.2vw;
+    margin: 5.333vw 0 3.2vw;
 }
 
 
