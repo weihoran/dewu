@@ -68,6 +68,8 @@ h5{
     font-family: HelveticaNeue-CondensedBold;
     font-size: 5.3vw;
     color: #01c2c3;
+    position: relative;
+    top: 1px;
 }
 
 .border{
